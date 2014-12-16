@@ -18,7 +18,7 @@ class rbenv::dependencies::ubuntu {
   if ! defined(Package['libssl-dev'])       { package { 'libssl-dev':       ensure => installed } }
   if ! defined(Package['libyaml-dev'])      { package { 'libyaml-dev':      ensure => installed } }
   if ! defined(Package['libxml2-dev'])      { package { 'libxml2-dev':      ensure => installed } }
-  if ! defined(Package['libxslt1-dev'])     { package { 'libxslt1-dev':     ensure => installed, alias =>'libxslt-dev' } }
+  if ! defined(Package['libxslt-dev'])      { package { 'libxslt-dev':      ensure => installed,} }
   if ! defined(Package['autoconf'])         { package { 'autoconf':         ensure => installed } }
   if ! defined(Package['git'])              { package { 'git':              ensure => installed, name => 'git-core' } }
   if ! defined(Package['curl'])             { package { 'curl':             ensure => installed } }
